@@ -15,9 +15,11 @@ let presenceState = Blueprint.newInput("presence", "Presence", "text")
 
 Blueprint.onExecution = async function () {
 
+  const presence = (presenceState.getValue() ? presenceState.getValue() : "auto")
+
   // Set request body
   var requestBody = {
-    presence: (presenceState.getValue() ? presenceState.getValue() : "auto")
+    presence: presence
   }
 
 
@@ -34,6 +36,6 @@ Blueprint.onExecution = async function () {
   const json = JSON.parse(response)
 
   // Create result
-  Blueprint.newResult("success", "Presence Set Success")
+  Blueprint.newResult("success", `Presence Set to ${presence}`)
 }
 
