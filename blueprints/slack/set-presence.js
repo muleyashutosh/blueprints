@@ -9,13 +9,15 @@ const headers = {
   "Content-Type": "application/json;charset=UTF-8",
 };
 
+// Set presenceState input
+let presenceState = Blueprint.newInput("presence_state", "Presence", "text")
 
 
 Blueprint.onExecution = async function () {
 
   // Set request body
   var requestBody = {
-    presence: "away"
+    presence: (presenceState.getValue() ? presenceState.getValue() : "auto")
   }
 
 
@@ -32,6 +34,6 @@ Blueprint.onExecution = async function () {
   const json = JSON.parse(response)
 
   // Create result
-  Blueprint.newResult("success", "Presence Set to Away")
+  Blueprint.newResult("success", "Presence Set Success")
 }
 

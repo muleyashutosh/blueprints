@@ -19,9 +19,9 @@
       "auth_scope": ["users.profile:write"]
     },
     {
-      "id": "set-away",
-      "name": "Set Away",
-      "description": "Set Away.",
+      "id": "set-presence",
+      "name": "Set Presence",
+      "description": "Set Presence.",
       "auth_scope": [
         "users:write"
       ]
