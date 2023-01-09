@@ -17,6 +17,14 @@
       "name": "Set Slack Status",
       "description": "Set Slack Status.",
       "auth_scope": ["users.profile:write"]
+    },
+    {
+      "id": "set-away",
+      "name": "Set Away",
+      "description": "Set Away.",
+      "auth_scope": [
+        "users.profile:write"
+      ]
     }
   ]
 }
