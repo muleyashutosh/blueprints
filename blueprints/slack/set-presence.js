@@ -10,7 +10,7 @@ const headers = {
 };
 
 // Set presenceState input
-let presenceState = Blueprint.newInput("presence_state", "Presence", "text")
+let presenceState = Blueprint.newInput("presence", "Presence", "text")
 
 
 Blueprint.onExecution = async function () {
