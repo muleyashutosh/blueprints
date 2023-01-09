@@ -23,7 +23,7 @@
       "name": "Set Away",
       "description": "Set Away.",
       "auth_scope": [
-        "users.profile:write"
+        "users:write"
       ]
     }
   ]
